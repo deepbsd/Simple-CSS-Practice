@@ -1,0 +1,16 @@
+/* Haven't put any styles in here yet... */
+
+ol li {
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	font-size: larger;
+}
+
+ol p {
+	font-family: 'Georgia', sans-serif;
+}
+
+code {
+	font-family: 'Monaco', sans-serif;
+	font-size: larger;
+}

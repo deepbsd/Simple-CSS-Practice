@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Practice</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Selector Types</h1>
+<ol>
+<li>Element Selectors</li>
+<p>This is just like what you're used to.</p>
+<li>Combination Selectors</li>
+<p>This type looks like <code>.foo.bar {/*rules here*/}</code>.  Targets all elements with both the foo and the bar classes.  Misses elements with either one or the other. </p>
+<p>Can also look like <code>p.foo.bar {/* styles */}</code>.  Targets only elements with both foo and bar classes.  Usually you'll chain this after the element styles alone.</p>
+<li>Multi Selectors</li>
+<p>Looks like <code>.foo, .bar, .bizz.bang {/* style declarations */}</code>.  Separate with commas, otherwise you'll select descendant elements.</p>
+<li>Descendant Selectors</li>
+<p><code>aside .bio { /* declarations */ }</code> Targets bio class only that are contained in p's.  If there's a bio class in an h1 or main, they will be missed.  Unless those h1 and main elements are inside an aside element.</p>
+<li>Direct Child Selectors</li>
+<p>Looks like <code>aside > p { /* styles */ }</code>  Misses all p's that are not first-order descendants of aside element.  Misses p's in div's even if div is inside aside.</p>
+<li>Before and After pseudo-element selectors</li>
+<p>Looks like <code>aside::before { /* styles */ }</code>  Handy, say, if you want to put a fontawesome smartquote before and after a blockquote, like <code>blockquote::before { content: "\f10d "; }</code>  and <code>blockquote::after { content: "\f10e";}</code></p>
+<li>Anchor pseudo-classes</li>
+<p>This typically applies to links and how they should appear in a particular state, such as active, visited, hover, etc.  Looks like <code><br>a:link { /* unvisited link */}<br>a:visited { /* visited link */}<br>a:hover {/* mouse over link */ } <br>a:active { /* selected link--you've clicked it but have not released the mouse button yet */ }</code></p>
+<li>Attribute Selectors</li>
+<p>These match specified elements with attributes that match simple regular expressions.  Looks like: <br>Exact match: <code>element[attribute=value] { /* styles */ }</code> <br> Match anywhere: <code>element[attribute*=value] { /* styles */ }</code> <br> Match at beginning of value: <code>element[attribute^=value] { /* styles */ }</code> <br> Match at end of value: <code>element[attribute$=value] { /* styles */ }</code></p>
+</ol>
+
+
+</body>
+</html>
